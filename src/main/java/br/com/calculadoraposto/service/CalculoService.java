@@ -3,8 +3,21 @@ package br.com.calculadoraposto.service;
 public class CalculosService {
 
     // regra tela 1
-    public double calcularAcrescimo(double valorAtual, double porcentagem) {
-        return valorAtual + (valorAtual * (porcentagem / 100));
+    public double calcularValorParaCobrar(double litrosBomba, double precoBomba, double acrescimo) {
+        double precoComAcrescimo = precoBomba + acrescimo;
+        return litrosBomba * precoComAcrescimo;
+    }
+
+    public double calcularValorParaDigitarNaBomba(double valorQueOClienteVaiPagar, double precoBomba, double acrescimo) {
+        double precoComAcrescimo = precoBomba + acrescimo;
+        double litrosQueOClienteTemDireito = valorQueOClienteVaiPagar / precoComAcrescimo;
+        
+        return litrosQueOClienteTemDireito * precoBomba;
+    }
+
+    public double calcularLitrosComAcrescimo(double valorQueOClienteVaiPagar, double precoBomba, double acrescimo) {
+        double precoComAcrescimo = precoBomba + acrescimo;
+        return valorQueOClienteVaiPagar / precoComAcrescimo;
     }
 
     // regra tela 2

@@ -34,6 +34,14 @@ public class CalculadoraView extends JFrame {
         abas.addTab("RAZÃO ALCOOL/GASOLINA", montarTelaRazao());
 
         add(abas);
+
+        // blindagem utilitario
+        permitirApenasNumeros(txtT1ValorDesejado); permitirApenasNumeros(txtT1ValorAcrescimo); permitirApenasNumeros(txtT1ValorLitroAtual);
+
+        permitirApenasNumeros(txtT2Quanto); permitirApenasNumeros(txtT2ValorLitroAtual);
+
+        permitirApenasNumeros(txtT3ValorAlcool); permitirApenasNumeros(txtT3ValorGasolina);
+
     }
 
     private JPanel montarTelaAcrescimo() {
@@ -121,4 +129,19 @@ public class CalculadoraView extends JFrame {
 
         return painel;
     }
+
+// utilitarios ============================================================================
+
+    // proibe usuario inputar letras e caracteres
+    private void permitirApenasNumeros(JTextField campo) {
+        campo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                char c = e.getKeyChar();
+                if (!Character.isDigit(c) && c != '.' && c != ',') {
+                    e.consume();
+                }
+            }
+        });
+    }
+
 }

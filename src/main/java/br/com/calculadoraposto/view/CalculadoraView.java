@@ -13,6 +13,7 @@ public class CalculadoraView extends JFrame {
     public JTextField txtT1ResultadoLitros = new JTextField();
 
     public JComboBox<String> comboT2QueroDescobrir = new JComboBox<>(new String[]{"VALOR", "LITRO"});
+    public JLabel lblT2Quanto = new JLabel("ABASTECER QUANTOS R$?");
     public JTextField txtT2Quanto = new JTextField();
     public JTextField txtT2ValorLitroAtual = new JTextField();
     public JTextField txtT2ResultadoReais = new JTextField();
@@ -86,7 +87,7 @@ public class CalculadoraView extends JFrame {
         gbc.gridx = 0; gbc.gridy = 0; painel.add(new JLabel("QUERO DESCOBRIR"), gbc);
         gbc.gridx = 1; gbc.ipadx = 150; painel.add(comboT2QueroDescobrir, gbc);
 
-        gbc.gridx = 0; gbc.gridy = 1; painel.add(new JLabel("QUANTO?"), gbc);
+        gbc.gridx = 0; gbc.gridy = 1; painel.add(lblT2Quanto, gbc);
         gbc.gridx = 1; painel.add(txtT2Quanto, gbc);
 
         gbc.gridx = 0; gbc.gridy = 2; painel.add(new JLabel("VALOR DO LITRO ATUAL"), gbc);

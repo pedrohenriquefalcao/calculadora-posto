@@ -30,7 +30,15 @@ public class CalculadoraController {
         };
         view.txtT2Quanto.addKeyListener(listenerTela2);
         view.txtT2ValorLitroAtual.addKeyListener(listenerTela2);
-        view.comboT2QueroDescobrir.addActionListener(e -> processarConversao());
+        view.comboT2QueroDescobrir.addActionListener(e -> {
+            String opcao = view.comboT2QueroDescobrir.getSelectedItem().toString();
+            if (opcao.equals("VALOR")) {
+                view.lblT2Quanto.setText("ABASTECER QUANTOS R$?");
+            } else {
+                view.lblT2Quanto.setText("ABASTECER QUANTOS LITROS?");
+            }
+            processarConversao();
+        });
 
         KeyAdapter listenerTela3 = new KeyAdapter() {
             public void keyReleased(KeyEvent e) { processarCombustivel(); }

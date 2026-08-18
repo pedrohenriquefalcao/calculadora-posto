@@ -1,6 +1,6 @@
 package br.com.calculadoraposto.service;
 
-public class CalculosService {
+public class CalculoService {
 
     // regra tela 1
     public double calcularValorParaCobrar(double litrosBomba, double precoBomba, double acrescimo) {

@@ -13,7 +13,7 @@ public class CalculadoraView extends JFrame {
     public JTextField txtT1ResultadoLitros = new JTextField();
 
     public JComboBox<String> comboT2QueroDescobrir = new JComboBox<>(new String[]{"VALOR", "LITRO"});
-    public JLabel lblT2Quanto = new JLabel("ABASTECER QUANTOS R$?");
+    public JLabel lblT2Quanto = new JLabel("ABASTECER QUANTOS LITROS?");
     public JTextField txtT2Quanto = new JTextField();
     public JTextField txtT2ValorLitroAtual = new JTextField();
     public JTextField txtT2ResultadoReais = new JTextField();

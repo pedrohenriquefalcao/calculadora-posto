@@ -43,9 +43,9 @@ public class CalculadoraController {
         view.comboT2QueroDescobrir.addActionListener(e -> {
             String opcao = view.comboT2QueroDescobrir.getSelectedItem().toString();
             if (opcao.equals("VALOR")) {
-                view.lblT2Quanto.setText("ABASTECER QUANTOS R$?");
-            } else {
                 view.lblT2Quanto.setText("ABASTECER QUANTOS LITROS?");
+            } else {
+                view.lblT2Quanto.setText("ABASTECER QUANTOS R$?");
             }
             processarConversao();
         });

@@ -10,12 +10,14 @@
 
 ## Ajustes e melhorias
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
+O projeto está em desenvolvimento contínuo. Atualmente as seguintes funcionalidades estão implementadas ou em planejamento:
 
-- [x] Cálculo de valores e litragem
+- [x] Cálculo de valores e litragem (com e sem acréscimo)
+- [x] Conversão entre Litragem e Valores em Reais
+- [x] Cálculo da razão Álcool vs Gasolina (Qual compensa mais)
+- [x] Persistência de preferência (valor de acréscimo)
 - [ ] Melhorias na interface do usuário
-- [ ] Adição de novos tipos de combustíveis
-- [ ] Persistência de histórico de cálculos
+
 
 ## Pré-requisitos
 
@@ -26,33 +28,29 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Você tem uma máquina Windows, Linux ou Mac.
 - Você leu a documentação do projeto.
 
-## Instalando Calculadora Posto
+## Instalando e Usando a Calculadora Posto
 
-Para instalar o projeto, siga estas etapas:
+### Para Usuários Finais (Pronto para Uso)
 
-Linux, macOS e Windows:
+Você não precisa compilar o projeto para usá-lo! Uma versão pronta da aplicação está disponível na pasta `export` (um nível acima da pasta de código-fonte).
+
+- **Windows:** Basta acessar a pasta `export` e executar o arquivo `CalculadoraPosto.exe`.
+- **Outros Sistemas Operacionais (Linux/macOS):** Certifique-se de ter o Java instalado e execute o arquivo `.jar` disponível na mesma pasta:
+  ```bash
+  cd export
+  java -jar calculadora-posto.jar
+  ```
+
+### Para Desenvolvedores (Código Fonte)
+
+Se você deseja clonar e modificar o projeto, siga estas etapas:
 
 ```bash
 git clone https://github.com/pedrohenriquefalcao/calculadora-posto.git
-cd calculadora-posto
-mvn clean install
+cd calculadora-posto/calculadora-posto
 ```
 
-## Usando Calculadora Posto
-
-Para executar a aplicação, siga estas etapas:
-
-```bash
-mvn spring-boot:run
-```
-
-Exemplos úteis:
-
-```bash
-mvn test
-mvn clean package
-java -jar target/*.jar
-```
+*(Nota: O projeto utiliza Java Swing para a interface gráfica. Importe o projeto em sua IDE favorita (Eclipse, IntelliJ, etc) para compilar e testar).*
 
 ## Contribuindo para Calculadora Posto
 

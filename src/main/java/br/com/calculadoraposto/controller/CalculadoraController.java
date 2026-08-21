@@ -5,16 +5,26 @@ import br.com.calculadoraposto.view.CalculadoraView;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.prefs.Preferences;
 
 public class CalculadoraController {
 
     private CalculadoraView view;
     private CalculoService service;
+    private Preferences prefs;
 
     public CalculadoraController(CalculadoraView view, CalculoService service) {
         this.view = view;
         this.service = service;
+        this.prefs = Preferences.userNodeForPackage(CalculadoraController.class);
+        
+        carregarPreferencias();
         iniciarOuvintesDeTexto();
+    }
+
+    private void carregarPreferencias() {
+        String acrescimoSalvo = prefs.get("valor_acrescimo", "");
+        view.txtT1ValorAcrescimo.setText(acrescimoSalvo);
     }
 
     private void iniciarOuvintesDeTexto() {
@@ -49,6 +59,9 @@ public class CalculadoraController {
 
 
     private void processarAcrescimo() {
+        // Salva o valor digitado independentemente do cálculo dar certo ou não
+        prefs.put("valor_acrescimo", view.txtT1ValorAcrescimo.getText());
+
         try {
             double valorDesejado = Double.parseDouble(view.txtT1ValorDesejado.getText().replace(",", "."));
             double acrescimo = Double.parseDouble(view.txtT1ValorAcrescimo.getText().replace(",", "."));

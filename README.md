@@ -8,17 +8,6 @@
 
 > Aplicação para encontrar valores (em R$, % e litragem) de combustíveis.
 
-## Ajustes e melhorias
-
-O projeto está em desenvolvimento contínuo. Atualmente as seguintes funcionalidades estão implementadas ou em planejamento:
-
-- [x] Cálculo de valores e litragem (com e sem acréscimo)
-- [x] Conversão entre Litragem e Valores em Reais
-- [x] Cálculo da razão Álcool vs Gasolina (Qual compensa mais)
-- [x] Persistência de preferência (valor de acréscimo)
-- [ ] Melhorias na interface do usuário
-
-
 ## Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
